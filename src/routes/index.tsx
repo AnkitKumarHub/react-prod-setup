@@ -37,7 +37,17 @@ const modules = [
     badge: "System Design",
     external: true,
   },
-  
+  {
+    title: "Interactivity",
+    description:
+      "Learn event handling, state updates, conditional rendering, and dynamic UI patterns.",
+    to: "/interactivity",
+    icon: MousePointer,
+    accent:
+      "border-emerald-200 bg-emerald-50 hover:border-emerald-300 hover:bg-emerald-100",
+    badge: "UI Logic",
+  },
+
 ];
 
 function Home() {
