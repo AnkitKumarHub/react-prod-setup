@@ -26,7 +26,18 @@ const modules = [
     badge: "Production",
     external: true,
   },
-
+  {
+    title: "Scaling",
+    description:
+      "Learn how large applications scale across teams, systems, and infrastructure.",
+    href: "https://link.excalidraw.com/readonly/2048B6UWNCZcG5R5Xbja?darkMode=true",
+    icon: Boxes,
+    accent:
+      "border-indigo-200 bg-indigo-50 hover:border-indigo-300 hover:bg-indigo-100",
+    badge: "System Design",
+    external: true,
+  },
+  
 ];
 
 function Home() {
