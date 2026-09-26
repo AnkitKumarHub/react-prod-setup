@@ -67,6 +67,17 @@ const modules = [
       "border-rose-200 bg-rose-50 hover:border-rose-300 hover:bg-rose-100",
     badge: "Advanced",
   },
+  {
+    title: "Routing",
+    description:
+      "Build multi-page React applications using modern file-based routing patterns.",
+    href: "https://chaicode.com/reviews?tag=webdev",
+    icon: RouteIcon,
+    accent:
+      "border-violet-200 bg-violet-50 hover:border-violet-300 hover:bg-violet-100",
+    badge: "Architecture",
+    external: true,
+  },
 ];
 
 function Home() {
