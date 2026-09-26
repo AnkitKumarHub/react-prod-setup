@@ -47,7 +47,17 @@ const modules = [
       "border-emerald-200 bg-emerald-50 hover:border-emerald-300 hover:bg-emerald-100",
     badge: "UI Logic",
   },
-
+  {
+    title: "Managing State",
+    description:
+      "Explore local state, derived state, lifting state up, and predictable data flow.",
+    to: "/state",
+    icon: Database,
+    accent:
+      "border-amber-200 bg-amber-50 hover:border-amber-300 hover:bg-amber-100",
+    badge: "State Management",
+  },
+ 
 ];
 
 function Home() {
