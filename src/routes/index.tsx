@@ -57,7 +57,16 @@ const modules = [
       "border-amber-200 bg-amber-50 hover:border-amber-300 hover:bg-amber-100",
     badge: "State Management",
   },
- 
+  {
+    title: "Performance",
+    description:
+      "Understand rendering, memoization, Suspense, and optimization bottlenecks.",
+    to: "/performance",
+    icon: Gauge,
+    accent:
+      "border-rose-200 bg-rose-50 hover:border-rose-300 hover:bg-rose-100",
+    badge: "Advanced",
+  },
 ];
 
 function Home() {

@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as InteractivityRouteImport } from './routes/interactivity'
+import { Route as PerformanceRouteImport } from './routes/performance'
 import { Route as StateRouteImport } from './routes/state'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const InteractivityRoute = InteractivityRouteImport.update({
   path: '/interactivity',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PerformanceRoute = PerformanceRouteImport.update({
+  id: '/performance',
+  path: '/performance',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StateRoute = StateRouteImport.update({
   id: '/state',
   path: '/state',
@@ -32,30 +38,34 @@ const StateRoute = StateRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/interactivity': typeof InteractivityRoute
+  '/performance': typeof PerformanceRoute
   '/state': typeof StateRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/interactivity': typeof InteractivityRoute
+  '/performance': typeof PerformanceRoute
   '/state': typeof StateRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/interactivity': typeof InteractivityRoute
+  '/performance': typeof PerformanceRoute
   '/state': typeof StateRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/interactivity' | '/state'
+  fullPaths: '/' | '/interactivity' | '/performance' | '/state'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/interactivity' | '/state'
-  id: '__root__' | '/' | '/interactivity' | '/state'
+  to: '/' | '/interactivity' | '/performance' | '/state'
+  id: '__root__' | '/' | '/interactivity' | '/performance' | '/state'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   InteractivityRoute: typeof InteractivityRoute
+  PerformanceRoute: typeof PerformanceRoute
   StateRoute: typeof StateRoute
 }
 
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InteractivityRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/performance': {
+      id: '/performance'
+      path: '/performance'
+      fullPath: '/performance'
+      preLoaderRoute: typeof PerformanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/state': {
       id: '/state'
       path: '/state'
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   InteractivityRoute: InteractivityRoute,
+  PerformanceRoute: PerformanceRoute,
   StateRoute: StateRoute,
 }
 export const routeTree = rootRouteImport
